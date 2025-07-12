@@ -1,0 +1,143 @@
+body {
+  background-image: url("../img/bg.png");
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #121214;
+  color: #fff;
+}
+
+body *{
+  font-family: "Inter", sans-serif;
+  line-height: 160%;
+}
+
+header {
+  padding-top: 1.2rem;
+  text-align: center;
+}
+
+header img {
+  width: 15rem;
+}
+
+main {
+  max-width: 36rem;
+  width: 90%;
+  margin: 3rem auto;
+}
+
+section {
+  background-image: linear-gradient(90deg, #f71515 0%, #fcb51c 50%, #e2d45c 100%);
+  border-radius: 0.625rem;
+  padding-top: 4px;
+}
+
+section > div {
+  padding: 2rem;
+  padding-top: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #342626;
+}
+
+section h2{
+  letter-spacing: -0.47px;
+}
+
+section p {
+  letter-spacing: -0.18px;
+  color: #A1A1AA;
+}
+
+/*Animações*/
+main section{
+  opacity: 0;
+  transform: translateY(2rem);
+
+  animation-name: appear;
+  animation-duration: 700ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+form {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin: 1.25rem 0;
+}
+
+input, select {
+  all: unset;
+  border: 2px solid #ff4747;
+  border-radius: 0.5rem;
+  padding: 0.675rem;
+  font-size: 0.875rem;
+  background-color: #00000056;
+}
+
+input {
+  flex: 1;
+}
+
+button {
+  width: 100%;
+  border: none;
+  background-image: linear-gradient(90deg, #f71515 0%, #fcb51c 50%, #e2d45c 100%);
+  padding: 0.675rem;
+  border-radius: 0.5rem;
+  font-weight: thin;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 16px rgba(255, 248, 107, 0.2);
+}
+
+button:disabled {
+  transition: initial;
+  transform: initial;
+  box-shadow: initial;
+  cursor: not-allowed;
+  color:  black;
+}
+
+.loading {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+#AiResponse {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  border-left: solid 4px #e79a43;
+}
+
+#AiResponse p {
+  color: white;
+}
+
+#AiResponse ul {
+  padding: 1.5rem;
+}
+
+.hidden {
+  display: none;
+}
